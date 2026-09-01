@@ -2,7 +2,13 @@
 
 public class TestaAluno {
     public static void main(String[] args){
-        Aluno a1 = new Aluno();
+        Aluno a1 = new Aluno("ale", 5.5, 3.0);
+        a1. exibeInfo();
+
+        Aluno a2 =new Aluno("Jessia");
+        a2.exibeInfo();
+
+        /*
         //a1.nome = "Ale";
         a1.setNome("ale");
         a1.setNota1(5.5);
@@ -33,6 +39,7 @@ public class TestaAluno {
     //     String situacao1 = a1.situacao();
     //    System.out.println(situacao1);
     // 
+    /* */
     }
     
 }
@@ -48,6 +55,18 @@ public class Aluno {
     private double nota1;
     private double nota2;
 
+    //construtores
+    public Aluno(String nome, double nota1, double nota2){
+        this.nome = nome;
+        this.nota1 = nota1;
+        this.nota2 = nota2;
+
+    }
+    public Aluno(String nome){
+        this.nome = nome;
+        this.nota1 = 0.0;
+        this.nota2 = 0.0;
+    }
 
     //metodos
     public double calculaMedia(){
